@@ -68,10 +68,27 @@ footer,
 .keyword.ui-autocomplete-input {
 	background: hsl(0, 100%, 100%) !important;
 	}
-.item.include.rendered {
-	background: white;
-	border-bottom: 0.25rem solid #f9f9f9 !important;
+
+.item { /* item seperator */
+	border-bottom: 1px solid #ddd !important;
 	}
+.item:last-child {
+	border-bottom: none !important;
+	}
+
+.current .item:nth-child(4) /* highlight whip limit problems in current items */
+	{
+	border-top: 3px solid #f03d00 !important;
+	position: relative;
+	top: -3px;
+	}
+.complete .item:nth-child(6) /* highlight whip limit problems in complete items */
+	{
+	border-top: 3px solid #f03d00 !important;
+	position: relative;
+	top: -3px;
+	}
+
 .item.include.rendered div,
 .item.include.rendered div .sub_items {
 	background: none !important;

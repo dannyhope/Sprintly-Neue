@@ -301,3 +301,7 @@ label {
 }
 
 /* @end */
+
+.keyword.ui-autocomplete-input { /* black search text */
+	color: hsl(0, 0%, 0%) !important; 
+}

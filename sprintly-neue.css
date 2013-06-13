@@ -22,21 +22,24 @@
 	color: white;
 	padding: 0.25em;
 	}
-/* blue background */
-.content,
-.stage_nav *,
-#logged_in_header {
-	background: hsl(197, 75%, 94%) !important;
+
+/* @group nav & body backgrounds */
+.content {
+	background: #dff5fc; /* nav */
 	}
-/* pale grey background */
+body {
+	background-color: #fefefe !important;
+	}
 #main-wrapper,
 .order_container,
 .items_column.current.default.none,
 .items_column,
-.c_label {
-	background: #f9f9f9 !important;
-	background-color: #f9f9f9;
+.c_label { /*getting the body background to show through*/
+	background: rgba(0,0,0,0) !important;
+	background-color: rgba(0,0,0,0) !important;
 	}
+/* @end */
+	
 .card.story .estimator .score,
 .score.estimate {
 	color: rgba(0,0,0,0.5) !important;
@@ -76,19 +79,6 @@ footer,
 	border-bottom: none !important;
 	}
 
-.current .item:nth-child(4) /* highlight whip limit problems in current items */
-	{
-	border-top: 3px solid #f03d00 !important;
-	position: relative;
-	top: -3px;
-	}
-.complete .item:nth-child(6) /* highlight whip limit problems in complete items */
-	{
-	border-top: 3px solid #f03d00 !important;
-	position: relative;
-	top: -3px;
-	}
-
 .item.include.rendered div,
 .item.include.rendered div .sub_items {
 	background: none !important;
@@ -117,24 +107,27 @@ div#footer,
 	font-weight: bold !important;
 	color: rgba(0,0,0,0.5) !important;
 	}
-.order,
+.orderxxx,
 .account .avatar {
 	display: none;
 	}
+
+/* @group Story parts – who, what & why */
+
 .part.who {
-	background: hsl(106, 89%, 86%) !important;
+	background: #b9ffb9 !important;
 	}
 .part.what {
-	background: hsl(58, 100%, 81%) !important;
+	background: #fcff92 !important;
 	}
 .part.why {
 	background: #fed4df !important;
 	}
+
+/* @end */
+
 .hud_container h2 {
 	background: none;
-	}
-.card_item.complete * {
-	background-color: white !important;
 	}
 .stage_nav {
 	position: relative;
@@ -147,9 +140,6 @@ div#footer,
 .active a {
 	font-weight: bold;
 	text-decoration: none !important;
-	}
-.items_column {
-	background: white !important;
 	}
 .avatar {
 	width: 24px !important;
@@ -267,17 +257,17 @@ body > * > * > * > * > * > * > * > * {
  {
 	background: hsl(58, 100%, 81%) !important;
 	background-color: hsl(58, 100%, 81%) !important;
-  border-bottom: none !important;
-}
+	border-bottom: none !important;
+	}
 .content, .global-filters {
-width: 100% !important;
-}
+	width: 100% !important;
+	}
 .order_container {
-width: 100% !important;
-}
+	width: 100% !important;
+	}
 .items_column {
-width: 33% !important;
-}
+	width: 33% !important;
+	}
 
 /* @end */
 
@@ -305,3 +295,48 @@ label {
 .keyword.ui-autocomplete-input { /* black search text */
 	color: hsl(0, 0%, 0%) !important; 
 }
+.product_item_view .card .story a.title { /* make item titles big in item details view */ 
+	font-size: 2rem !important;
+	background:red !important;
+	text-decoration: none;
+	cursor: text;
+  	color: black;
+    display: block;
+}
+.product_item_view .card a.title:hover { /* make item titles big in item details view */ 
+	text-decoration: none;
+}
+.card {
+	width: 100%;
+	background: white !important;
+}
+.card .body {
+	background: white !important;
+    }
+.tag {
+	background-color: hsl(0, 0%, 93%);
+	padding: 0.3rem 0.5rem;
+	border-radius: 0.3rem;
+}
+.card .outer_bottom {
+	display: none !important; /* remove creator/date from the card – it’s already in the activity list */
+    }
+
+/* @group Whip limits */
+.current .item:nth-child(4) /* highlight whip limit problems in current items */
+	{
+	border-top: 3px solid #f03d00 !important;
+	position: relative;
+	top: -3px;
+	}
+.complete .item:nth-child(6) /* highlight whip limit problems in complete items */
+	{
+	border-top: 3px solid #f03d00 !important;
+	position: relative;
+	top: -3px;
+	}
+/* @end */
+.stage_nav * {
+	background: none !important;
+	background-color: none !important;
+	}
